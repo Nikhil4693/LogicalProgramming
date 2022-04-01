@@ -1,4 +1,4 @@
-package com.bs.LogicalProgramming;
+package com.bs.logics;
 
 /**
  * Hello world!
