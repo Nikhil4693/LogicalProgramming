@@ -1,4 +1,4 @@
-package com.bs.logics;
+package com.bs.strings;
 
 public class Test04_RemoveDupicateInStringUsingPredefinedMethods {
     public static void main(String[] args) {

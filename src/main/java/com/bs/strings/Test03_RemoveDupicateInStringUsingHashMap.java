@@ -1,4 +1,4 @@
-package com.bs.logics;
+package com.bs.strings;
 
 import java.util.LinkedHashSet;
 

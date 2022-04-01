@@ -1,6 +1,4 @@
-package com.bs.logics;
-
-import java.util.Scanner;
+package com.bs.strings;
 
 public class Test08_ReverseWordofString {
     public static void main(String[] args) {

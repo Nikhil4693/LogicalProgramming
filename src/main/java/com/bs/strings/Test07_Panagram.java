@@ -1,4 +1,4 @@
-package com.bs.logics;
+package com.bs.strings;
 
 public class Test07_Panagram {
     public static void main(String[] args) {
