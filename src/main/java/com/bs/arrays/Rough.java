@@ -2,27 +2,34 @@ package com.bs.arrays;
 
 public class Rough {
     public static void main(String[] args) {
-        String str = "I am an Indian";
-        int length = str.length ();
-        char[] ch = str.toCharArray ();
-        String res="";
-        for (int i = 0; i < length; i++) {
-            int k=i;
-            //loop to increase i upto white space
-            while (i < length && ch[i] != ' ') {
-                i++;
-            }
+        //Initialize matrix a
+        int a[][] = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+        int b[][] = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+        //Calculates the number of rows and columns present in the given matrix
+        int rows = a.length;
+        int cols = a[0].length;
+        boolean flag = false;
 
-            //take pointer to before space character
-            int j=i-1;
-            //append char from initial index to before space char and concate to string
-            while(k<=j){
-                res=res+ch[j];
-                j--;
+        //if each eement of a matrix is exactly equal to b matrix
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                if (a[row][col] == b[row][col]) {
+                    flag = true;
+                }
             }
-            res=res+' ';
         }
+    if(flag)
+        System.out.println ("all are same");
+    else
+        System.out.println ("not same");
 
-        System.out.println (res);
     }
 }
