@@ -9,35 +9,35 @@ import java.util.stream.Collectors;
 public class ListToMapDemo {
     public static void main(String[] args) {
         List<User> users = Arrays.asList(
-                new User(10, "ankur", "Morshi"),
-                new User(15, "nikhil", "Jitapur"),
-                new User(98, "nana", "Warud"),
-                new User(36, "nana", "Nagpur")
+                new User("10", "ankur", "Morshi"),
+                new User("15", "nikhil", "Jitapur"),
+                new User("98", "nana", "Warud"),
+                new User("36", "nana", "Nagpur")
         );
 
-        Map<Integer, String> map1 = users.stream().collect(Collectors.toMap(User::getId, User::getName));
-        System.out.println(map1);
+//        Map<Integer, String> map1 = users.stream().collect(Collectors.toMap(User::getId, User::getName));
+//        System.out.println(map1);
         Map<String, String> map2 = users.stream().collect(Collectors.toMap(User::getName,User::getCity ,(oldValue,newValue)-> oldValue, LinkedHashMap::new));
         System.out.println(map2);
     }
 }
 
 class User {
-    private int id;
+    private String id;
     private String name;
     private String city;
 
-    public User(int id, String name, String city) {
+    public User(String  id, String name, String city) {
         this.id = id;
         this.name = name;
         this.city = city;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
